@@ -175,6 +175,30 @@
 <h2 id="cataecalignmentfitting"><a class="header" href="#cataecalignmentfitting">CATAECAlignmentFitting</a></h2>
 <h4 id="01242024-wed-14472646"><a class="header" href="#01242024-wed-14472646">&quot;01/24/2024 Wed 14:47:26.46&quot;</a></h4>
 <hr />
+<p>此功能主要是基于CAD 的一些线路信息生成近似的3D 线路，常规操作除了使用3DE 的线路功能，要么导入IFC等数据，要么采用展开法去回折得到一个准确的3D线路曲线，但是这个方法有时候作为演示使用太麻烦了，不如直接采用生成点的方式拟合一个样条曲线来的方便；</p>
+<h2 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h2>
+<p>运行 batch-CATAECAlignmentFitting.bat 进行操作</p>
+<pre><code class="language-cpp">printf(&quot;帮助信息：\n&quot;);
+printf(&quot;命令格式：CATAECAlignmentFitting.exe C:\\Deom.CATPart AAA 1 2 3 200 0.5 [options]&quot;);
+printf(&quot;CATPart 地址,&quot;);
+printf(&quot;输入条件所在的几何图形集名称,&quot;);
+printf(&quot;线路展开平面线在集合中的序号,&quot;);
+printf(&quot;线路纵断面曲线展开线在集合中的序号,&quot;);
+printf(&quot;线路平曲线在集合中的序号,&quot;);
+printf(&quot;点数量,&quot;);
+printf(&quot;点间距，默认0.5米,&quot;);
+
+
+</code></pre>
+<p>修改 文件内容</p>
+<pre><code class="language-batch">set p1=C:\\Deom.CATPart
+set p2=AAA
+set p3=1
+set p4=2
+set p5=3
+set p6=100
+set p7=0.5
+</code></pre>
 
                     </main>
 
