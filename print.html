@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="HOME.html">HOME</a></li><li class="chapter-item expanded "><a href="CATAECTunnelRingArrayUpdate/CATAECTunnelRingArrayUpdate.html"><strong aria-hidden="true">1.</strong> 隧道UDF参数更新程序</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="HOME.html">HOME</a></li><li class="chapter-item expanded "><a href="CATAECTunnelArrayRing/CATAECTunnelArrayRing.html"><strong aria-hidden="true">1.</strong> 创建隧道排布</a></li><li class="chapter-item expanded "><a href="CATAECTunnelRingArrayUpdate/CATAECTunnelRingArrayUpdate.html"><strong aria-hidden="true">2.</strong> 隧道UDF参数更新程序</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -180,11 +180,34 @@
 <li><a href="./CATAECTunnelRingArrayUpdate/CATAECTunnelRingArrayUpdate.html">隧道UDF参数更新程序</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><hr />
+<h2 id="cataectunnelarrayring"><a class="header" href="#cataectunnelarrayring">CATAECTunnelArrayRing</a></h2>
+<hr />
+<p>本程序主要是创建管片排布的初步模板</p>
+<h2 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h2>
+<p>输入条件为
+文件位置
+模板位置
+线路所在的几何图形集名称
+管片数量</p>
+<p>如果需要修改每个环的角度避开通缝和F块底部位置需要使用其他更新程序；</p>
+<pre><code class="language-batch">
+@echo ===================================
+set CATEnvName=Env9_GT
+Set CATEnvPath=&quot;%~dp0\CATEnv&quot;
+set ModuleName=CATAECTunnelArrayRing.exe
+set p1=G:\CODE\CATIA-CAA-B27-AEC-CIVIL-BATCH\win_b64\startup\Tunnel\Part1.CATPart
+set p2=&quot;%~dp0win_b64\startup\Tunnel\TUNNEL-RING-PW-NOREC.CATPart&quot;
+set p3=&quot;A&quot;
+set p4=100
+@echo ===================================
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
 <h2 id="cataectunnelringarrayupdate"><a class="header" href="#cataectunnelringarrayupdate">CATAECTunnelRingArrayUpdate</a></h2>
 <hr />
 <p>本程序主要是更新隧道udf 排布参数
 <img src="CATAECTunnelRingArrayUpdate/discr1.jpg" alt="说明图" /></p>
-<h2 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h2>
+<h2 id="使用方法-1"><a class="header" href="#使用方法-1">使用方法</a></h2>
 <p>在此 .\batch-CATAECTunnelRingArrayUpdate.bat 文件内填好必要的参数；</p>
 <pre><code class="language-batch">set p1=D:\BaiduSyncdisk\PROJECTS\ZJIC-TUNNEL-PROJECT\DELIVERY_DOCUMENTS\PROJECT_MODEL\YONGZHOU_TUNNEL\Part5.CATPart
 set p2=&quot;Alignment_Set_GEO_AAA&quot;
